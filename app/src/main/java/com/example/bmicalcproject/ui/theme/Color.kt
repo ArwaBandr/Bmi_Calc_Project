@@ -1,0 +1,18 @@
+package com.example.bmicalcproject.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val Purple80 = Color(0xFFAD88C6)
+val PurpleGrey80 = Color(0xFFCCC2DC)
+val Pink80 = Color(0xFFEFB8C8)
+
+val Purple40 = Color(0xFFAD88C6)
+val PurpleGrey40 = Color(0xFF625b71)
+val Pink40 = Color(0xFF7D5260)
+
+object BmiColor{
+val content=Color(0xFF12372A)
+    val backgroundcolor= Color(0xFFBACD92)
+    val primarycolor=Color(0xFF75A47F)
+    val characterColor = Color(0xFF436850)
+}
