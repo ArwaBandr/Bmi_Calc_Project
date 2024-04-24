@@ -60,7 +60,7 @@ fun BmiInterface(viewModel: BmiVewModel = androidx.lifecycle.viewmodel.compose.v
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
-            .background(BmiColor.backgroundcolor)
+            .background(color = MaterialTheme.colorScheme.background)
             .fillMaxSize()
             .padding(40.dp)
     ) {
@@ -103,9 +103,8 @@ fun BmiInterface(viewModel: BmiVewModel = androidx.lifecycle.viewmodel.compose.v
             value = WeightSliderPosition,
             onValueChange = { WeightSliderPosition = it },
             valueRange = 1f..150f,
-            colors =SliderDefaults.colors(BmiColor.primarycolor)
-            //colors = SliderDefaults.colors(AppColor.blue1)
-            //colors = SliderDefaults.colors(Color.Blue)
+            colors =SliderDefaults.colors(MaterialTheme.colorScheme.primary)
+
         )
         Row(
             horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier
@@ -122,8 +121,8 @@ fun BmiInterface(viewModel: BmiVewModel = androidx.lifecycle.viewmodel.compose.v
             value = HeightSliderPosition,
             onValueChange = { HeightSliderPosition = it },
             valueRange = 40f..200f,
-            colors =SliderDefaults.colors(BmiColor.primarycolor)
-            //colors = SliderDefaults.colors(Color.Blue)
+            colors =SliderDefaults.colors(MaterialTheme.colorScheme.primary)
+
         )
         Row(
             horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier
@@ -141,7 +140,7 @@ fun BmiInterface(viewModel: BmiVewModel = androidx.lifecycle.viewmodel.compose.v
                 .align(Alignment.CenterHorizontally)
                 .fillMaxWidth()
                 .padding(top = 40.dp, bottom = 10.dp),
-            colors = ButtonDefaults.buttonColors(BmiColor.primarycolor)
+            colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primary)
         ) {
             Text(text = stringResource(id = R.string.calculate),style = MaterialTheme.typography.bodyMedium)
         }
@@ -154,11 +153,11 @@ fun BmiInterface(viewModel: BmiVewModel = androidx.lifecycle.viewmodel.compose.v
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
                 .fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(BmiColor.primarycolor)
+            colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primary)
         ) {
             Text(text = stringResource(id = R.string.Reset),style = MaterialTheme.typography.bodyMedium)
         }
-        Divider(modifier = Modifier.padding(top=50.dp), thickness = 1.dp, color = BmiColor.primarycolor)
+        Divider(modifier = Modifier.padding(top=50.dp), thickness = 1.dp, color = MaterialTheme.colorScheme.primary)
         Text(text = viewModel.resultText, Modifier.padding(top = 20.dp), style = MaterialTheme.typography.bodyMedium)
 
     }
